@@ -131,15 +131,15 @@ class CreateAllTables extends Migration
 
         Schema::create('k4ranks', function (Blueprint $table) {
             $table->string('steam_id', 32)->primary();
-            $table->string('name', 255);
+            $table->string('name', 191);
             $table->dateTime('lastseen');
-            $table->string('rank', 255);
+            $table->string('rank', 191);
             $table->integer('points')->default(0);
         });
 
         Schema::create('k4stats', function (Blueprint $table) {
             $table->string('steam_id', 32)->primary();
-            $table->string('name', 255);
+            $table->string('name', 191);
             $table->dateTime('lastseen');
             $table->integer('kills')->default(0);
             $table->integer('firstblood')->default(0);
@@ -183,7 +183,7 @@ class CreateAllTables extends Migration
 
         Schema::create('k4times', function (Blueprint $table) {
             $table->string('steam_id', 32)->primary();
-            $table->string('name', 255);
+            $table->string('name', 191);
             $table->dateTime('lastseen');
             $table->integer('all')->default(0);
             $table->integer('ct')->default(0);
